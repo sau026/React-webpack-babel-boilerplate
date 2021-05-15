@@ -14,9 +14,16 @@
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^5.2.4",
+    "dotenv-webpack": "^7.0.2",
     "html-webpack-plugin": "^5.3.1",
+    "node-sass": "^6.0.0",
     "react-hot-loader": "^4.13.0",
+    "sass-loader": "^11.1.1",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
     "webpack": "^5.37.0",
+    "webpack-bundle-analyzer": "^4.4.1",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
@@ -24,6 +31,7 @@
   "scripts": {
     "start": "webpack serve --config build-utils/webpack.config.js --env env=dev",
     "build": "webpack --config build-utils/webpack.config.js --env env=prod",
+    "build:analyze": "npm run build -- --env addon=bundleanalyze",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
