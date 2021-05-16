@@ -1,8 +1,10 @@
-import React from 'react';
+import React from "react";
 import Image from "./assets/images";
-import IM from './assets/images/sun.jpg' 
+import IM from "./assets/images/sun.jpg";
 import { BrowserRouter } from "react-router-dom";
 import RouterOutlet from "./router-outlet";
+import Login from "./pages/Login";
+import { lightTheme, darkTheme, purpleTheme } from "./assets/constant/theme";
 import "./App.scss";
 
 // const App = ({title}) => {
@@ -15,6 +17,9 @@ import "./App.scss";
 // }
 
 const App = ({ title }) => {
+  const root = document.getElementsByTagName("html")[0];
+  root.style.cssText = darkTheme.join(";");
+
   return (
     <BrowserRouter>
       <RouterOutlet />

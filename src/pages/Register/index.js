@@ -6,7 +6,7 @@ import CONSTANT from "../../assets/constant/constant";
 import Image from "../../assets/images";
 import "./index.scss";
 
-const Login = (props) => {
+const Register = (props) => {
   const [userName, setUserName] = useState(null);
   const [userPass, setUserPass] = useState(null);
   const [loader, setLoader] = useState(false)
@@ -31,11 +31,20 @@ const Login = (props) => {
         />
       </div>
       <div className="form__control">
-        <ButtonPrimary label={CONSTANT.LOGIN} loader={loader}></ButtonPrimary>
+        <label>{CONSTANT.CONFIRM_PASSWORD}</label>
+        <InputPrimary
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+        />
       </div>
-      <span className="not_reg">Not registered yet?<Link to="/register" className="signUp__link">&nbsp;Sign Up</Link></span>
+      <div className="form__control">
+        <ButtonPrimary label={CONSTANT.REGISTER} loader={loader}></ButtonPrimary>
+      </div>
+      <span className="not_reg">Already have an account?<Link to="/" className="signUp__link">&nbsp;Sign In</Link></span>
     </div>
   );
 };
 
-export default Login;
+export default Register;
