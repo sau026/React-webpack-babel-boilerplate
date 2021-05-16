@@ -4,11 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-<<<<<<< Updated upstream
-=======
     "history": "^5.0.0",
     "mini-css-extract-plugin": "^1.6.0",
->>>>>>> Stashed changes
     "path": "^0.12.7",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",

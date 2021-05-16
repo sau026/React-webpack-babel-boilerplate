@@ -1,12 +1,3 @@
-<<<<<<< Updated upstream
-import React from 'react';
-
-const App = ({title}) => {
-    return(
-        <div>{title}</div>
-    )
-}
-=======
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import RouterOutlet from "./router-outlet";
@@ -15,7 +6,6 @@ import IM from "./assets/images/sun.jpg";
 import "./App.scss";
 
 import Login from "./pages/Login";
->>>>>>> Stashed changes
 
 const App = ({ title }) => {
   return (
