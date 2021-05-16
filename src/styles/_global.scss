@@ -1,0 +1,44 @@
+.form__control {
+    margin: 1rem auto;
+    width: 100%;
+    label{
+      color: var(--text);
+      margin-bottom: 0.2rem;
+      font-size: 0.9rem;
+    }
+    input{
+        margin-top: 0.2rem;
+    }
+    button{
+        margin-top: 0.8rem
+    }
+  }
+
+  .btn__disabled{
+    opacity: 0.3;
+    background: unset !important;
+    box-shadow: unset !important;
+  }
+
+//Tostify custom css
+.Toastify__toast--default {
+  box-shadow: var(--boxShadowGlassy) !important;
+  background: var(--backgroundSecond) !important;
+}
+
+.Toastify__progress-bar--default {
+  background: linear-gradient(
+    to right,
+    var(--background),
+    var(--backgroundSecond),
+    var(--background),
+    var(--backgroundSecond),
+    var(--background),
+    var(--backgroundSecond)
+  ) !important;
+}
+
+.Toastify__close-button--default {
+  width: 20px;
+  color: #fff !important;
+}
