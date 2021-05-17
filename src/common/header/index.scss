@@ -1,0 +1,69 @@
+@import "./../../styles/colors";
+@import "../../styles/global";
+
+.header__container {
+  background: var(--backgroungGlassy);
+  box-shadow: var(--boxShadowGlassy);
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    padding: 0;
+    width: 100%;
+    .logo{
+      color: var(--icon);
+      transition: color 1s;
+      font-weight: 500;
+    }
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    align-items: center;
+    .icon{
+      color: var(--icon);
+      transition: color 1s;
+    }
+    .switch__btn{
+      color: var(--icon);
+      transition: color 1s;
+    }
+  }
+
+  .user__menu {
+    position: relative;
+    cursor: pointer;
+    .profile__popup {
+      visibility: hidden;
+      position: absolute;
+      right: 0;
+      top: 30px;
+      padding: 10px;
+      background: var(--background);
+      width: 100px;
+      height: 30px;
+      border-radius: 3px;
+      transition: 0.5s;
+      opacity: 0;
+      box-shadow: var(--boxShadowGlassy);
+      display: flex;
+      justify-content: center;
+      span {
+        text-align: center;
+        cursor: pointer;
+        color: var(--text);
+      }
+    }
+  }
+}
+
+.user__menu:hover {
+  .profile__popup {
+    visibility: visible;
+    transition: 0.5s;
+    opacity: 1;
+  }
+}

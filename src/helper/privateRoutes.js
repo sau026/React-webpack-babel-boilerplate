@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { checkAuthorization } from '../helper/helper';
-// import Header from '../common/header';
+import Header from '../common/header';
 
 const PrivateRoute = ({
   component: Component,

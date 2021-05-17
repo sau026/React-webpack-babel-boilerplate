@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { Provider } from "react-redux";
+import store from "./redux/store/store";
 import App from './App';
-import sum from './sum.js';
- 
-console.log(sum(2, 5));
-console.log(process.env.NODE_ENV)
 
 const title = 'React with Webpack and Babel';
 
 ReactDOM.render(
-    <App title={title} />,
+    <Provider store={store}>
+    <App title={title} />
+    </Provider>,
     document.getElementById('app')
 )
 

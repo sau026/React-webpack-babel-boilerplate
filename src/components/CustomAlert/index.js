@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { updateUser } from "../../redux/actions/crudOperationAction";
 import InputPrimary from "../Input";
 import ButtonPrimary from "../Button";
