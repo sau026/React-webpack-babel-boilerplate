@@ -1,28 +1,28 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import Wrapper from "../../layouts/Wrapper";
-// import ThemeContext from "../../context/themeContext";
+import ThemeContext from "../../context/themeContext";
 import { ToastContainer, toast } from "react-toastify";
 import "./index.scss";
 
 const Sidebar = () => {
   const history = useHistory();
-  // const { themeName, toggle } = useContext(ThemeContext);
+  const { themeName, toggle } = useContext(ThemeContext);
 
   const logout = () => {
     localStorage.removeItem("token");
-    toast("Sucessfully logged out!");
+    // toast("Sucessfully logged out!");
     history.push("/home");
   };
 
   const themeSwitch = () => {
-    // if(themeName == 'lightTheme'){
-    //   return "🌙";
-    // } else if(themeName == 'darkTheme'){
-    //   return "🌈"
-    // } else{
-    //   return "☀️"
-    // }
+    if(themeName == 'lightTheme'){
+      return "🌙";
+    } else if(themeName == 'darkTheme'){
+      return "🌈"
+    } else{
+      return "☀️"
+    }
   }
 
   return (
@@ -39,11 +39,11 @@ const Sidebar = () => {
             <i className="fas fa-calendar-week icon"></i>
             <i className="far fa-comment icon"></i>
             <i className="far fa-clock icon"></i>
-            {/* <div onClick={() => toggle()} stopPropagation>
+            <div onClick={() => toggle()} stopPropagation>
               <span title="switch theme" className="switch__btn" style={{ cursor: "pointer", fontSize: '24px'}}>
                {themeSwitch()}
               </span>
-            </div> */}
+            </div>
             <div className="user__menu">
               <i className="far fa-user icon"></i>
               <div className="profile__popup" onClick={logout}>

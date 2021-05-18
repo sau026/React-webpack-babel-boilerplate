@@ -12,7 +12,6 @@ export const checkUserName = (data, history) => async (dispatch) => {
         localStorage.setItem('token', response.result.jwtToken)
         dispatch(userName(response));
         dispatch(setLoading(false));
-        history.push('/home');
         resolve(response);
       })
       .catch((error) => {

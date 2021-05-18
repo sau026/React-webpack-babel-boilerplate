@@ -22,6 +22,7 @@ const Login = (props) => {
       password: userPass,
     };
     const loginRes = await dispatch(checkUserName(obj, history));
+    history.push("/home");
     if(loginRes){
       setLoader(false)
     }

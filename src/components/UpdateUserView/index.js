@@ -36,7 +36,7 @@ const UpdateUser = (props) => {
     dispatch(getAllUser());
     props.onCancelClick()
     setLoader(true);
-    toast("Data Sucessfully Updated!");
+    // toast("Data Sucessfully Updated!");
    }
   };
 

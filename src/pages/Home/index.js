@@ -47,7 +47,7 @@ const Home = () => {
     setLoader(false);
     setOpenDeleteAlert(false);
     dispatch(getAllUser());
-    toast("Data Sucessfully Delete !");
+    // toast("Data Sucessfully Delete !");
   };
 
   const callUserUpdate = (e) => {
