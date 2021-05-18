@@ -9,7 +9,6 @@ const ThemeContext = React.createContext({
 export default ThemeContext;
 
 export function ThemeProvider(props) {
-  console.log('saurabh spapapa')
   // keeps state of the current theme
   const [themeName, setThemeName] = useState(false);
 
